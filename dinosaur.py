@@ -10,7 +10,7 @@ class Dinosaur:
 
     def attack(self,robot):
         self.attack_power = 25 
-        if robot 
+        robot.health -= self.attack_power
 
 
     pass

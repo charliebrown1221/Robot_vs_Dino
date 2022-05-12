@@ -4,4 +4,4 @@ class Weapon:
         self.name= 'Power Fists'
         self.attack_power =25
         pass
-    pass
+    
