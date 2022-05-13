@@ -14,7 +14,7 @@ class Battlefield:
 
 
  def display_welcome(self):
-    print(f'LETS GET READY TO RUMBLE!! Good evening and welcome to tonights fight which promises to be a classic in every sense of the word. In the red corner, weighing in at 99,000 tons and the undisputed world champion the legend known as {self.dinosaur.name}….. And in the    blue corner weighing in at 55,000 tons ……. {self.robot.name} !! And tonights prize? ETERNAL GLORRRYYY!')
+    print(f'LETS GET READY TO RUMBLE!! Good evening and welcome to tonights fight which promises to be a classic in every sense of the word. In the red corner, weighing in at 99,000 tons and the undisputed world champion the legend known as {self.dinosaur.name}….. And in the blue corner weighing in at 55,000 tons ……. {self.robot.name} !! And tonights prize? ETERNAL GLORRRYYY!')
     
   
 
@@ -27,7 +27,7 @@ class Battlefield:
       self.robot.attack(self.dinosaur)
       print(f'{self.robot.name} attacked {self.dinosaur.name} with {self.robot.active_weapon.name} for {self.robot.active_weapon.attack_power}!')
       print(f'{self.dinosaur.name} has {self.dinosaur.health} remaining!') 
-     if self.robot.health <= 0:
+     if self.robot.health <= 0 or self.dinosaur.health <= 0:
        self.display_winner()
      
     
@@ -35,7 +35,7 @@ class Battlefield:
 
  def display_winner(self):
    if self.dinosaur.health <= 0:
-      print(f'{self.robot.name} has won the match, what a crazy fight!!')
+      print(f'{self.robot.name} has won the match, i did not think he would find a battery to get in the last hit what a crazy fight!!')
    elif self.robot.health <= 0:
       print(f'The winner and still undefeted champion {self.dinosaur.name}')  
     
